@@ -1,5 +1,3 @@
-import './style.scss'
-
 export function setupCalendar(element) {
   const monthYearEl = document.getElementById('month-year');
   const daysContainer = document.getElementById('calendar-days');
@@ -14,7 +12,7 @@ export function setupCalendar(element) {
 
   const monthNames = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
 
-  let currentDate = new Date(); // Initialize to current date
+  let currentDate = new Date();
   let startDate = null;
   let endDate = null;
 
@@ -25,9 +23,9 @@ export function setupCalendar(element) {
     // Display month and year
     monthYearEl.textContent = `${monthNames[month]} ${year}`;
 
-    const firstDay = (new Date(year, month).getDay() + 6) % 7; // First day of the month (0 - Mon, 6 - Sun)
-    const daysInMonth = 32 - new Date(year, month, 32).getDate(); // Days in current month
-    const prevMonthDays = 32 - new Date(year, month - 1, 32).getDate(); // Days in previous month
+    const firstDay = (new Date(year, month).getDay() + 6) % 7;
+    const daysInMonth = 32 - new Date(year, month, 32).getDate();
+    const prevMonthDays = 32 - new Date(year, month - 1, 32).getDate();
 
     daysContainer.innerHTML = '';
 
@@ -89,8 +87,8 @@ export function setupCalendar(element) {
 
     // Calculate rows needed (5 or 6)
     const totalDaysRendered = firstDay + daysInMonth;
-    const totalCells = Math.ceil(totalDaysRendered / 7) * 7; // Round up to full week
-    const daysToAdd = totalCells - totalDaysRendered; // Days from next month
+    const totalCells = Math.ceil(totalDaysRendered / 7) * 7;
+    const daysToAdd = totalCells - totalDaysRendered;
 
     // Add days from next month
     for (let day = 1; day <= daysToAdd; day++) {

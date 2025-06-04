@@ -1,5 +1,3 @@
-import './style.scss'
-
 export function themeToggle() {
   const toggleButton = document.querySelector('.theme-toggle');
 
