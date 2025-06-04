@@ -15,17 +15,17 @@
 * **Инструкции по установке**  
 
 * 1. Переключитесь на нужную версию Node.js с помощью nvm:  
-  * nvm use 18.14.0  
+  nvm use 18.14.0  
 
 * 2. Установите зависимости:  
-  * npm i  
+  npm i  
 
 * 3. Создайте новый проект с помощью Vite:  
-  * npm create vite@latest  
+  npm create vite@latest  
 
 * **Запустите проект в режиме разработки или предпросмотра:**  
-  * npm run preview  
-  * или   
-  * npm run dev  
+  npm run preview  
+  или   
+  npm run dev  
   
 
